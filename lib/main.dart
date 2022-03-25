@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/screens/home.dart';
+import 'package:flutter_catalog/screens/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,22 +12,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    int days=30;
+   
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'flutter catalog',
+      // themeMode: ThemeMode.dark,
+      // darkTheme: ThemeData(
+      //   brightness: Brightness.dark,
+      //   //primarySwatch: Colors.deepPurple,
+      // ),
       theme: ThemeData(
        
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.deepPurple,
       ),
-      home:  Scaffold(
-        drawer: Drawer(),
-        appBar: AppBar(title: const Text('my app')),
-        body:SafeArea(
-          child: Center(child: Container(
-            child: Text('its $days days of tutorial'),
-          ),),
-        ),
-        ),
+      //home: const HomePage(),
+      initialRoute: '/login',
+      routes: {
+        '/':(context)=>const HomePage(),
+        '/login':(context) => const  LoginPage(),
+      },
+
       );
     
   }
