@@ -6,16 +6,20 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(child: 
-      Text('Login Here',
-      textAlign: TextAlign.center,
-      textDirection: TextDirection.rtl,
-      style: TextStyle(
-        decoration: TextDecoration.overline,
-        color: Colors.blue,
-        fontSize: 30,
-        fontWeight: FontWeight.bold,
-        fontStyle: FontStyle.italic,
-      ),)),
+      Center(
+        child: Text('Login Here',
+        textAlign: TextAlign.center,
+        textDirection: TextDirection.rtl,
+        //textScaleFactor: 3.0,
+        style: TextStyle(
+          decoration: TextDecoration.overline,
+          color: Colors.blue,
+          fontSize:30,
+          fontWeight: FontWeight.bold,
+          fontStyle: FontStyle.italic,
+        ),),
+      )),
     );
   }
 }
+//images added
